@@ -1,0 +1,200 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Full viewport height */
+    background-color: #f4f4f4;
+    /* Light background color */
+}
+
+.register-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 45px;
+    background-color: #ffffff;
+    /* White background for the form */
+}
+
+.register-container h2 {
+    text-align: center;
+    color: #095179;
+    margin-bottom: 25px;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-container input,
+.register-container select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.register-container button {
+    background-color: #095179;
+    margin-left: 25%;
+    color: white;
+    font-size: 15px;
+    border-radius: 25px;
+    width: 50%;
+    padding: 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.register-container button:hover {
+    background-color: white;; /* Darker shade for hover effect */
+    color: #095179 ;
+    border: 1px solid black;
+}
+
+.register-container input[type="text"],
+.register-container input[type="password"],
+.register-container select {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 17px 20px 17px 45px;
+    /* Adjust padding for the icon */
+    /* Allow absolute positioning of the icon */
+}
+
+/* Input group styles */
+.input-group {
+    position: relative;
+}
+
+.input-group i.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    /* Position the icon inside the input */
+    transform: translateY(-50%);
+    color: #615454;
+    font-size: 16px;
+    pointer-events: none;
+    /* Prevents interaction with the icon */
+}
+
+.input-group input {
+    padding-left: 45px;
+    /* Space for the left icon */
+}
+
+/* Password wrapper styles */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px;
+    /* Space for the eye icon */
+}
+
+.password-wrapper .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    /* Position the eye icon to the right side */
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    /* Adjust size as needed */
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 15px;
+    }
+
+    .register-container input,
+    .register-container select,
+    .register-container button {
+        font-size: 14px;
+    }
+
+    .password-wrapper .toggle-password {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 10px;
+    }
+
+    .register-container input,
+    .register-container select,
+    .register-container button {
+        font-size: 12px;
+    }
+
+    .password-wrapper .toggle-password {
+        font-size: 14px;
+    }
+}
+
+.back-link-container p {
+    color: #979494;
+}
+
+.back-link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6px;
+}
+
+.back-link-container a {
+    margin-left: 6px;
+    color: #2980b9;
+}
+
+.username-message {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    color: rgb(199, 29, 29);
+    /* Default color */
+}
+
+p {
+    text-align: center;
+    color: green;
+}
+/* Additional CSS for the back button */
+.back-button {
+    justify-content: center;
+    display: flex;
+    background-color: #095179;
+    color: white;
+    font-size: 15px;
+    border-radius: 25px;
+    width: 11%;
+    padding: 14px 15px 15px 12px;
+    margin-bottom: 7px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: white; /* Darker shade for hover effect */
+    color: #095179;
+    border: 1px solid black;
+}

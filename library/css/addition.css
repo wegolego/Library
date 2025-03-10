@@ -1,0 +1,240 @@
+/* General styles */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    padding-left: 15px;
+    background: linear-gradient(-45deg, #124188, #161a2d);
+    color: white;
+    font-size: 20px;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    width: 100%; /* Ensure header fits the viewport width */
+    z-index: 2000;
+}
+
+/* Remove Row Button */
+.header-controls #remove-row {
+    background-color: #c0392b;
+    color: white;
+}
+
+.header-controls #remove-row:hover {
+    background-color: #a93226;
+}
+
+/* Style for the Remove Row button when disabled */
+.header-controls #remove-row:disabled {
+    background-color: #095179;
+    cursor: not-allowed;
+    color: white;
+}
+
+h2 {
+    text-align: start;
+    margin-left: 10px;
+}
+
+.title-container {
+    margin: 25px 0px 10px 0px;
+    width: 100%;
+}
+
+/* General notification styling */
+.notification {
+    display: none; /* Initially hidden */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed; /* Fix the notification in the viewport */
+    top: 50%; /* Position from the top of the viewport */
+    left: 50%; /* Position from the left of the viewport */
+    transform: translate(-50%, -50%); /* Center the notification */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    max-width: 90%; /* Limit width for smaller screens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    text-align: center; /* Center text inside the notification */
+}
+
+/* Success notification styling */
+.notification.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Error notification styling */
+.notification.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/* Content container */
+.content-container {
+    padding: 20px 20px 20px 120px;
+    flex: 1;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 40px);
+}
+
+/* Addition form */
+.addition-form {
+    max-width: 98%;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Header container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-container h2 {
+    margin: 0;
+}
+
+.header-controls {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.header-controls button {
+    border: solid 1px #095179;
+    background-color: #095179;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-controls button:hover {
+    background-color: white;
+    color: #095179;
+}
+
+.header-controls i {
+    margin-right: 5px;
+}
+
+/* Row count display */
+.row-count {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Table */
+#books-table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+}
+
+#books-table th,
+#books-table td {
+    padding: 5px;
+    text-align: center;
+}
+
+#books-table th {
+    background-color: white;
+    color: #095179;
+
+}
+
+#books-table td input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+
+
+
+
+/* Submit button */
+.addition-form button[type="submit"] {
+    border: solid 1px #095179;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #095179;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 1; /* Ensure it stays on top */
+}
+
+/* Input box */
+.addition-form button[type="submit"]:hover {
+    background-color: white;
+    color: #095179;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .addition-form {
+        padding: 10px;
+    }
+
+    .addition-form button[type="submit"] {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .addition-form {
+        padding: 5px;
+    }
+
+    .addition-form button[type="submit"] {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,417 @@
+
+.header {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    padding-left: 15px;
+    background: linear-gradient(-45deg, #124188, #161a2d);
+    color: white;
+    font-size: 20px;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+h2 {
+    text-align: center;
+    margin-left: 10px;
+}
+.title-container h2 {
+    text-align: start;
+    margin-left: 10px;
+}
+
+.title-container {
+    margin: 25px 0px 10px 0px;
+    width: 100%;
+}
+
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 89%;
+    width: 94%;
+    position: absolute;
+    margin-left: 85px;
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 30%;
+}
+
+.banner-1 {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    background: white;
+    position: relative;
+    height: 80%;
+    width: 25%;
+    border: none;
+    border-radius: 30px;
+}
+
+.value-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    padding: 0;
+}
+
+
+.icon-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container .fa {
+    text-align: center;
+    color: #7561ee;
+    font-size: 60px;
+    width: 100px;
+    line-height: 100px;
+}
+
+.banner-2 .icon-container .fa {
+    text-align: center;
+    color: #1e88e5;
+    font-size: 60px;
+    width: 100px;
+    line-height: 100px;
+}
+
+.banner-3 .icon-container .fa {
+    text-align: center;
+    color: #fc4b6c;
+    font-size: 60px;
+    width: 100px;
+    line-height: 100px;
+}
+
+.banner-2 {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    background: white;
+    position: relative;
+    height: 70%;
+    width: 20%;
+    border: none;
+    border-radius: 30px;
+}
+
+.banner-3 {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    background: white;
+    position: relative;
+    height: 80%;
+    width: 25%;
+    border: none;
+    border-radius: 30px;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+
+}
+
+.div-1 {
+    padding: 10px;
+    /* margin-right: 20px; */
+    margin-left: 20px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    height: 100%;
+    width: 70%;
+
+}
+
+
+
+.div-3 {
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    height: 100%;
+    width: 30%;
+}
+
+.div-3 h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+.div-3-title-container {
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+
+
+.calendar-container {
+    width: 350px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    margin: 0 auto;
+
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#month-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    color: #555;
+}
+
+.calendar-days div {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar-days div:hover {
+    background-color: #eee;
+}
+
+.calendar-days .today {
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+.div-title {
+    position: inherit;
+    background-color: #d7e0e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    height: 5%;
+    width: 100%;
+}
+
+
+.banner-value p {
+    font-size: 30px;
+
+
+}
+
+
+
+
+
+
+/* Table Styles */
+
+.table-wrapper {
+    margin-top: 5px;
+    /* box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2); */
+}
+
+.fl-table {
+    padding: 40px;
+    font-size: 10px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    /* max-width: 100%; */
+    white-space: nowrap;
+    background-color: white;
+    overflow: scroll;
+    position: relative;
+}
+
+.fl-table td,
+.fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Smooth slide for carousel */
+.carousel-inner {
+    transition: transform 1s ease;
+}
+
+button {
+
+    margin-top: 10px;
+    width: auto;
+    padding: 1px 10px 1px 10px;
+
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.view-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: px;
+}
+
+.view-button a {
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+.view-button a:hover {
+    text-decoration: none;
+    color: rgb(183, 181, 181);
+}
+
+/* Keyframes for fly-in animation */
+@keyframes flyIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes flyDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+}
+
+/* Apply fly-in animation to divs */
+.div-1,
+.div-2,
+.div-3 {
+    animation: flyIn 1s ease-in-out;
+}
+
+/* Add delay to each div for staggered effect */
+.div-1 {
+    animation-delay: 0.2s;
+}
+
+.div-2 {
+    animation-delay: 0.2s;
+}
+
+.div-3 {
+    animation-delay: 0.2s;
+}
+
+
+
+.banner-1,
+.banner-2,
+.banner-3 {
+    animation: flyDown 1s ease-in-out;
+}
+
+.banner-1 {
+    animation-delay: 0.2s;
+
+}
+
+.banner-2 {
+    animation-delay: .2s;
+}
+
+.banner-3 {
+    animation-delay: .2s;
+}
+
+.totalBorrowed p {
+    text-align: center;
+    font-size: 15px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 10px;
+
+}

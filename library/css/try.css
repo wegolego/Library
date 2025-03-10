@@ -1,0 +1,196 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.nav-container {
+    width: 200px;
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    /* Keep the navigation bar fixed on the left */
+    top: 0;
+    /* Align it with the top of the viewport */
+    left: 0;
+    /* Align it with the left of the viewport */
+    transition: width 0.3s ease;
+}
+
+.nav-container.minimized {
+    width: 60px;
+    /* Width when minimized */
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    align-self: flex-end;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    transition: margin 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+.nav-footer {
+    margin-top: auto;
+}
+
+.content-container {
+    margin-left: 220px;
+    /* Ensure content starts after the navigation bar */
+    padding: 20px;
+    flex: 1;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+    /* Adjust height for the navigation padding */
+    transition: margin-left 0.3s ease;
+}
+
+.content-container.expanded {
+    margin-left: 80px;
+    /* Adjust margin when nav is minimized */
+}
+
+/* Center the banners and layout them in a 2x2 grid */
+.summary-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.summary-item {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.summary-item:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.summary-item i {
+    font-size: 50px;
+}
+
+.summary-item h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.summary-item p {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-container {
+        width: 150px;
+    }
+
+    .nav-container.minimized {
+        width: 50px;
+        /* Smaller width when minimized */
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .content-container {
+        margin-left: 170px;
+        padding: 10px;
+    }
+
+    .content-container.expanded {
+        margin-left: 70px;
+        /* Adjust margin when nav is minimized */
+    }
+
+    .summary-item {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        width: 120px;
+    }
+
+    .nav-container.minimized {
+        width: 40px;
+        /* Smaller width when minimized */
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .content-container {
+        margin-left: 140px;
+        padding: 5px;
+    }
+
+    .content-container.expanded {
+        margin-left: 60px;
+        /* Adjust margin when nav is minimized */
+    }
+
+    .summary-item {
+        width: 200px;
+        height: 130px;
+    }
+}

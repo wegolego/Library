@@ -1,0 +1,277 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #F0F4FF;
+}
+
+.sidebar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(-45deg, #124188, #161a2d);
+    padding: 25px 20px 0px 20px;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+    height: 15%;
+    overflow-y: block;
+ 
+}
+
+.nav-logo {
+    margin-top: 10px;
+    width: 55px;
+}
+
+.sidebar:hover {
+    width: 260px;
+    overflow: hidden; /* Prevent scroll on hover */
+}
+
+.sidebar .sidebar-header {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .sidebar-header h2 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 23px;
+}
+
+.sidebar-links h4 {
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap;
+    margin: 10px 0;
+    position: relative;
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links .menu-separator {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(1);
+    transform: translateY(-50%);
+    background: #4f52ba;
+    transform-origin: right;
+    transition-delay: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+    transition-delay: 0s;
+    transform: scaleX(0);
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 20px;
+    height: calc(100vh - 120px); /* Adjust height to prevent overflow */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.sidebar-links:hover {
+    overflow-y: auto; /* Allow scroll only if necessary */
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+.sidebar-links::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.sidebar-links li a:hover {
+    color: #161a2d;
+    background: #fff;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.user-account {
+    margin-top: auto;
+    padding: 12px 10px;
+    margin-left: -10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    color: #161a2d;
+}
+
+.user-profile img {
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.user-profile h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.user-profile span {
+    font-size: 0.775rem;
+    font-weight: 600;
+}
+
+.user-detail {
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.sidebar:hover .user-account {
+    background: #fff;
+    border-radius: 4px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #333;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Prevent dropdown overflow */
+}
+
+.dropdown-content li {
+    padding: 10px 15px;
+    list-style: none;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dropdown-content li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-content li a:hover {
+    background-color: #fff;
+    color: #161a2d;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: auto;
+}
+
+.sidebar-links li.dropdown:hover> {
+    background-color: #fff;
+    color: #161a2d;
+    border-radius: 4px;
+}
+
+.sidebar:hover .dropdown-content {
+    left: calc(100% - 85px);
+    /* Adjust based on sidebar width */
+    top: 0;
+}
+
+/* Sidebar hover effects */
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links .menu-separator {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(1);
+    transform: translateY(-50%);
+    background: #4f52ba;
+    transform-origin: right;
+    transition-delay: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+    transition-delay: 0s;
+    transform: scaleX(0);
+}
+
+/* Dropdown Styles for Borrow Section */
+.sidebar-links .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    padding-left: 25px;
+    list-style-type: none;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.sidebar-links .dropdown:hover .dropdown-menu {
+    display: block;
+    padding-left: 25px;
+    overflow: hidden; /* Prevent scroll in dropdown on hover */
+}
+
+.sidebar-links .dropdown-menu li a {
+    padding: 10px 10px 10px 10px;
+}
+
+.sidebar-links .dropdown-menu li a:hover {
+    background: #fff;
+    color: #161a2d;
+    border-radius: 4px;
+}
+
+.dropdown-container {
+    position: absolute;
+}

@@ -1,0 +1,590 @@
+/* General styles */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* overflow: hidden; */
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    padding-left: 15px;
+    background: linear-gradient(-45deg, #124188, #161a2d);
+    color: white;
+    font-size: 20px;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+h2 {
+    text-align: start;
+    padding-left: 10px;
+}
+
+.title-container {
+    margin: 25px 0 10px;
+    width: 100%;
+}
+
+.content-container {
+    padding: 20px 20px 20px 120px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ecf0f1;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.back-button {
+    font-size: 1rem;
+    background-color: #095179;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: white;
+    color: #095179;
+    border: 1px solid #095179;
+}
+
+.borrow-button {
+    display: flex;
+    float: right;
+    background-color: #3498db;
+    font-size: 14px;
+    color: white;
+    padding: 15px 20px 15px 15px;
+    margin: 10px 0px 10px 10px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+
+.borrow-button i {
+    margin-right: 10px;
+}
+
+.borrow-button:hover {
+    background-color: #2980b9;
+}
+
+/* Table styles */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensure the table does not shrink too much */
+    table-layout: fixed; /* Ensures table layout is fixed */
+}
+
+.table-container th {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(234, 235, 235);
+    color: #095179;
+}
+
+.table-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Specific style for the "Quantity" header */
+.table-container th.name-header {
+    width: 150px;
+    padding: 5px;
+    
+}
+.table-container th.id-header {
+    width: 150px;
+    padding: 5px;
+    
+    
+}
+.table-container th.class-header {
+    width: 150px;
+    padding: 5px;
+    
+}
+.table-container th.quantity-header {
+    width: 60px;
+    padding: 5px;
+    
+    
+}
+.table-container th.bookname-header {
+    width: 150px;
+    padding: 5px;
+    
+}
+
+.table-container th.status-header {
+    width: 100px;
+    padding: 5px;
+    
+}
+
+.table-container th.dborrow-header {
+    width: 110px;
+    padding: 5px;
+    
+}
+
+.table-container th.Action-header {
+    width: 90px;
+    padding: 5px;
+    
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Prevent scrolling */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 100px auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust width to fit content */
+    max-width: 500px; /* Maximum width */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better visual */
+    overflow: hidden; /* Prevent internal scroll */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and close button */
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+.close {
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s;
+    /* Ensure it stays on the right side */
+    margin-left: auto; /* Pushes the button to the right side */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Modal form styling */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-form label {
+    font-weight: bold; /* Make labels bold */
+    margin-bottom: 0px;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.modal-form input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Update button styles */
+.modal-btn {
+    background-color: #095179;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.modal-btn:hover {
+    background-color: #033d53;
+}
+
+
+.update-button {
+    background-color: #095179;
+    color: white;
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+.update-button:hover {
+    background-color: #033d53;
+}
+
+/* General icon button styles */
+.action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Adjust the size as needed */
+    color: #3498db; /* Primary color */
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 50%;
+    padding: 8px; /* Adjust padding to fit the icon */
+    background-color: #ecf0f1; /* Light background */
+}
+
+.action-icon i {
+    margin: 0;
+}
+
+.action-icon:hover {
+    color: #2980b9; /* Darker color on hover */
+    background-color: #dbe3e8; /* Slightly darker background on hover */
+}
+
+/* Delete icon button styles */
+.delete-icon {
+    color: red; /* Red color */
+    border: 1px solid red;
+    transition: .5s;
+}
+
+.delete-icon:hover {
+    color: rgb(214, 56, 56); /* Darker red on hover */
+    background-color: white; /* Light red background on hover */
+    border: 1px solid rgb(214, 56, 56);
+}
+
+/* Tooltip styles */
+.action-icon::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+.action-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.delete-icon::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(0, 71%, 54%);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+.delete-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.notification p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.notification-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: hsl(204, 64%, 44%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.notification-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Search styles */
+.search-container {
+    width: 100%;
+    margin: 20px 10px 0px 0px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 11px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    width: 200px;
+}
+
+.search-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #095179;
+    border: 1px solid #095179;
+    padding: 7px 5px 9px 10px;
+    border-radius: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: .4s;
+}
+
+.search-button i {
+    margin-right: 5px;
+}
+
+.search-button:hover {
+    background-color: #095179;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-container {
+        width: 150px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .content-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        width: 120px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .content-container {
+        padding: 5px;
+    }
+}
+
+/* Delete All button */
+.delete-all-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.delete-all-button {
+    background-color: #095179;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #095179;
+    transition: .4s;
+}
+    
+
+.delete-all-button:hover{
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+}
+
+
+/* Due Dates button and tooltip styles */
+.due-dates-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 20px; /* Adjust size as needed */
+    color: white; /* Adjust color as needed */
+    cursor: pointer;
+    margin-left: 10px; /* Adjust spacing as needed */
+}
+
+.due-dates-text {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    background-color: #ecf0f1; /* Match your theme */
+    padding: 5px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-size: 14px; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+}
+
+.due-dates-button:hover .due-dates-text {
+    display: block;
+}
+ /* delete confirmation */
+.input#password{
+    border-radius: 5px;
+    padding: 5px;
+}
+button.verify-button{
+    background-color: #3498db;
+    color: white;
+    padding: 10px 38px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+button.verify-button:hover {
+    background-color: #2980b9;
+}
+input#password{
+    width: 250px;
+    padding: 8px;
+    border-radius: 8px;
+}
+/* pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination-link {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    color: #095179;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination-link:hover {
+    background-color: #f2f2f2;
+}
+
+.pagination-link.active {
+    background-color: #095179;
+    color: white;
+    border-color: #095179;
+}
+
+.pagination-ellipsis {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    color: #095179;
+    text-align: center;
+}
